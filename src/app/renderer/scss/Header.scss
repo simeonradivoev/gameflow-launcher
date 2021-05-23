@@ -1,0 +1,60 @@
+.app-header {
+  background: linear-gradient(to right, $root-background-light, $root-background-dark);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: $header-size;
+  padding-left: 38px;
+  display: flex;
+
+  .menu {
+    margin-right: auto;
+
+    .element {
+      display: inline-block;
+      padding-left: 16px;
+      padding-right: 16px;
+      height: 50px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #9fa6ba;
+      user-select: none;
+      cursor: pointer;
+
+      .label {
+        border-bottom-color: transparent;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        box-sizing: border-box;
+        line-height: 53px;
+        height: 100%;
+      }
+
+      &.active .label {
+        border-bottom-color: $accent-color;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        color: $text-active;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  #user-controls {
+    float: right;
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+    gap: 1rem;
+
+    #avatar-circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: $border-radius-huge;
+      background-size: contain;
+    }
+
+    #username {}
+  }
+}

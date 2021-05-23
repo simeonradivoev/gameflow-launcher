@@ -1,0 +1,188 @@
+@import "./SubWindowPopup.scss";
+
+@font-face {
+  font-family: 'MotivaSans';
+  src: local('MotivaSans'), url(../../../assets/fonts/Motiva-Sans.ttf) format('opentype');
+  font-style: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MotivaSans';
+  src: local('MotivaSans'), url(../../../assets/fonts/Motiva-Sans-Bold.ttf) format('opentype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'MotivaSans';
+  src: local('MotivaSans'), url(../../../assets/fonts/Motiva-Sans-Light.ttf) format('opentype');
+  font-style: normal;
+  font-weight: lighter;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  user-select: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  order: -1;
+  line-height: 1;
+  color: $text-active;
+  height: 100vh;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 16px;
+  font-family: 'MotivaSans', sans-serif;
+}
+
+*::placeholder {
+  font-family: 'MotivaSans', sans-serif;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.root-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+svg+.label {
+  margin-left: 4px;
+}
+
+.opaque-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(farthest-corner at 0px 0px,
+      $app-background-color-gradient-light, $app-background-color-gradient-dark);
+}
+
+.round-button {
+  display: flex;
+  background-color: $button-color;
+  border-radius: 4px;
+  color: $text-normal;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+
+  &:hover {
+    color: $text-active;
+    background-color: $accent-color;
+  }
+
+  &.disabled {
+    background-color: rgba($button-color, 0.5);
+    color: rgba($text-normal, 0.5);
+    cursor: auto;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.main-view {
+  position: absolute;
+  top: $header-size;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+input,
+select {
+  background-color: transparent;
+  border-color: $input-outline-color;
+  border-style: solid;
+  border-radius: 4px;
+  padding-left: 8px;
+  padding-top: 2px;
+  color: $text-active;
+  font-size: 12px;
+  font-weight: bold;
+
+  &:disabled {
+    user-select: none;
+    color: rgba($text-normal, 0.5);
+  }
+
+  &:focus {
+    outline-width: 0px;
+  }
+
+  &::placeholder {
+    color: $text-normal;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.minimal-scroll {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $button-color-bright;
+    border-radius: 6px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $text-active;
+  }
+}
+
+.auto-hide-scroll {
+  overflow-y: hidden;
+  padding-right: 10px;
+
+  &:hover {
+    overflow-y: scroll;
+    padding-right: 0;
+  }
+}

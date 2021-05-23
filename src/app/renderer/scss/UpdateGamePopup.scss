@@ -1,0 +1,163 @@
+.full-width {
+  display: flex;
+  flex-grow: 1;
+
+}
+
+.time-field {
+  .bp3-input-action {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.bp3-popover-wrapper.full-width {
+  display: block;
+
+  .bp3-popover-target {
+    display: block;
+    display: flex;
+    flex-grow: 1;
+
+    &>div {
+      display: block;
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+}
+
+.bp3-file-input.full-width .bp3-file-upload-input {
+  display: flex;
+  flex-grow: 1;
+}
+
+.update-game-popup {
+
+  .content {
+    .menu {
+      min-width: 256px;
+      margin-right: 0;
+    }
+
+    .options {
+      padding-left: 0;
+
+      .options-fields {
+        display: flex;
+        flex-direction: column;
+        padding-right: 6px;
+
+        .other-action .bp3-form-group {
+          border-bottom-width: 1px;
+          border-bottom-color: $background-light-separator-light;
+          border-bottom-style: solid;
+          padding-bottom: 15px;
+        }
+
+        .bp3-control-group {
+          flex: 1;
+        }
+
+        .field {
+          display: flex;
+          flex: 1;
+          margin-top: 4px;
+          border-left-width: 4px;
+          border-left-style: solid;
+          border-left-color: transparent;
+
+          &.changed {
+            border-left-color: $accent-color;
+            border-left-style: solid;
+          }
+
+          .label-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+          }
+
+          label {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            font-weight: bold;
+            color: $text-normal;
+            padding-left: 18px;
+
+            .label {
+              display: flex;
+              text-align: left;
+              width: 120px;
+              align-items: center;
+            }
+
+            .top-label {
+              margin-top: 4px;
+              align-items: baseline;
+            }
+          }
+
+          input,
+          select {
+            flex-grow: 1;
+            height: 28px;
+          }
+
+          .dropdown {
+            background-color: transparent;
+            font-size: 12px;
+
+            .dropdown__control {
+              background-color: transparent;
+              border-color: $input-outline-color;
+              border-width: 2px;
+            }
+
+            .dropdown__menu {
+              color: $text-dark;
+            }
+
+            .dropdown__value-container {}
+
+            .dropdown__indicator-separator {
+              background-color: $input-outline-color;
+            }
+
+            .dropdown__placeholder {
+              color: $text-normal;
+            }
+
+            .dropdown__indicator {
+              &:hover {
+                color: $accent-color;
+              }
+            }
+
+            .dropdown__single-value {
+              color: $text-active;
+            }
+
+            .dropdown__input {
+              color: $text-active;
+            }
+
+            .dropdown__indicators {}
+          }
+        }
+      }
+
+      .bottom-buttons {
+        .button {
+          &:first-child {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.game-list-scroll {
+
+  width: 300px;
+  min-width: 300px;
+
+  .game-list {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+
+
+    .group {
+      margin-bottom: 6px;
+      flex-shrink: 0;
+    }
+
+    .header-back {
+      border-top-right-radius: $border-radius-normal;
+      background-color: $background-light;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 36px;
+      background-color: $button-color;
+      padding-left: 38px;
+      font-size: 13px;
+      color: $header-text;
+      user-select: none;
+      border-top-right-radius: 9px;
+      border-bottom-right-radius: 9px;
+      cursor: pointer;
+
+      span {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      svg {
+        color: $text-normal;
+      }
+
+      .counter {
+        margin-left: 12px;
+        padding: 4px 6px 4px 6px;
+        border-radius: $border-radius-normal;
+        background-color: $button-color-bright;
+        color: $text-active;
+        font-weight: bold;
+        font-size: 11px;
+      }
+
+      .expand {
+        margin-left: auto;
+        padding: 4px;
+        margin-right: 8px;
+
+        .expanded {
+          color: $text-active;
+        }
+      }
+    }
+
+    .game-entry {
+      display: flex;
+      flex-direction: row;
+      background-color: $background-light;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: $background-light-separator-dark;
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 32px;
+        font-size: 13px;
+        user-select: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        cursor: pointer;
+        color: $text-active;
+        flex: 1;
+      }
+
+      .game-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+        border-radius: $border-radius-small;
+      }
+
+      &:hover {
+        background-color: $accent-color;
+      }
+
+      &.selected {
+        background-color: transparent;
+        border-bottom-color: transparent;
+        cursor: auto;
+      }
+
+      &.selected-before {
+        border-bottom-right-radius: $border-radius-normal;
+        border-bottom-color: transparent;
+      }
+
+      &.selected+li {
+        border-top-right-radius: $border-radius-normal;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: $border-radius-normal;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}

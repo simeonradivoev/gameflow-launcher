@@ -1,0 +1,45 @@
+// Colors
+$accent-color: #3b7cef;
+$accent-color-darker: #316ed8;
+$accent-color-lighter: #498bfc;
+$text-normal: #9fa6ba;
+$header-text: #d6d8e1;
+$text-active: #eaebef;
+$text-dark-label: #58618d;
+$text-dark: #3a4162;
+$root-background-light: #414a6e;
+$root-background-dark: #3a4162;
+$background-light: #333c5e;
+$background-light-separator-dark: #2f3858;
+$background-light-separator-light: #384266;
+$button-color: #47527b;
+$button-color-bright: #626f9e;
+$input-outline-color: #535f81;
+$app-background-color-gradient-dark: #171c31;
+$app-background-color-gradient-darker: #131729;
+$app-background-color-gradient-light: #272e47;
+
+//Sizes
+$header-size: 50px;
+$search-header-height: 56px;
+
+//Other
+$border-radius-huge: 1rem;
+$border-radius-big: 0.5rem;
+$border-radius-normal: 0.3rem;
+$border-radius-small: 0.15rem;
+
+// Blueprints
+$pt-intent-primary: $accent-color;
+$pt-font-family: 'MotivaSans',
+sans-serif;
+
+$dark-gray1: $app-background-color-gradient-darker;
+$dark-gray2: $app-background-color-gradient-dark;
+$dark-gray3: $app-background-color-gradient-light;
+$dark-gray4: $root-background-dark;
+$dark-gray5: $root-background-dark;
+
+$dark-button-background-color: $button-color;
+$dark-button-background-color-hover: $accent-color;
+$dark-button-gradient: none;

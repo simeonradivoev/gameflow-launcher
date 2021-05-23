@@ -1,0 +1,85 @@
+@import "./UpdateGamePopup.scss";
+@import "./GameList.scss";
+@import "./DetailView.scss";
+
+.search-header {
+  display: flex;
+  position: relative;
+  background: linear-gradient(to right, #323a57, #29314c);
+  height: $search-header-height;
+  width: 100%;
+  padding-left: 53px;
+  align-items: center;
+}
+
+select {
+  option {
+    color: $text-active;
+    background-color: $root-background-dark;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $root-background-dark;
+    }
+  }
+}
+
+.search-field {
+  margin-right: 8px;
+  width: 210px;
+  height: 28px;
+
+  &::-webkit-search-cancel-button {
+    color: $text-normal;
+    cursor: pointer;
+    background-color: $button-color;
+  }
+
+  &::-webkit-search-cancel-button {
+    color: $text-active;
+    background-color: $button-color;
+  }
+
+  &::-webkit-search-cancel-button:after {
+    content: "X";
+    font-style: italic;
+    color: red;
+  }
+}
+
+.filter-button {
+  margin-right: 16px;
+}
+
+.add-game-button {
+  margin-left: auto;
+  margin-right: 32px;
+  padding: 6px 24px;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: $text-active;
+}
+
+.layout-button {
+  display: flex;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: $text-normal;
+
+  &.active {
+    color: $text-active;
+  }
+}
+
+.list-view {
+  position: absolute;
+  top: $search-header-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "gameflow-launcher",
+  "productName": "gameflow-launcher",
+  "version": "0.0.1",
+  "description": "Open source video game library manager.",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Simeon Radivoev",
+    "email": "simeonradivoev@gmail.com",
+    "url": "https://github.com/gameflow-launcher"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ../.erb/scripts/BabelRegister.js ../.erb/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "exiftool-vendored": "^14.4.0",
+    "icon256": "^1.2.5"
+  }
+}
