@@ -14,6 +14,13 @@ const Credits: React.FC = () => {
       <a href="https://www.flaticon.com/" title="Flaticon">
         www.flaticon.com
       </a>
+      Design by
+      <a
+        title="Andrew Kuzmin"
+        href="https://dribbble.com/shots/7880263-Game-Store-Launcher"
+      >
+        Andrew Kuzmin
+      </a>
     </div>
   );
 };

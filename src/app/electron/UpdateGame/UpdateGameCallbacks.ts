@@ -4,6 +4,7 @@ import { exiftool } from 'exiftool-vendored';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { Events, typedIpcMain } from '../../common/NetworkChannels';
+import { ActionType } from '../../common/Types';
 import Game from '../../common/Types/Game';
 import GameEntry from '../../common/Types/GameEntry';
 import { getAssetPath, isDevelopment } from '../Common';
@@ -194,9 +195,14 @@ export default (
   const processDroppedExe = async (filePath: string) => {
     try {
       const tags = (await exiftool.read(filePath)) as any;
-      console.log(tags);
       if (tags.FileDescription) {
         const newGame = new Game(uuidv4(), tags.FileDescription);
+        newGame.playAction = {
+          type: ActionType.EXECUTABLE,
+          path: filePath,
+          name: '',
+          address: '',
+        };
         const mainWindow = getMainWindow();
         if (mainWindow) {
           await gameDataStore.update({ id: newGame.id }, newGame, {
